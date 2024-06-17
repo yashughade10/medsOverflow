@@ -7,6 +7,7 @@ import Home from './components/Home';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { userContext } from './context/Context';
 import Questions from './components/AddQuestions/Questions';
+import ViewQuestion from './components/ViewQuestions/ViewQuestion';
 
 function App() {
   const [isLoginTrue, setIsLoginTrue] = useState(false)
@@ -21,6 +22,8 @@ function App() {
             <Route exact path='/signin' element={<SignIn />} />
             <Route exact path='/home' element={<Home />} />
             <Route exact path='/add-question' element={<Questions />} />
+            <Route exact path='/all-questions' element={<Home />} />
+            <Route exact path='/question' element={<ViewQuestion />} />
           </Routes>
         </BrowserRouter>
       </userContext.Provider>
